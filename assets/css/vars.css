@@ -1,0 +1,35 @@
+html {
+  --ms0: 1em;
+  --ratio: 1.25;
+  --ms1: calc(var(--ms0) * var(--ratio));
+  --ms2: calc(var(--ms1) * var(--ratio));
+  --ms3: calc(var(--ms2) * var(--ratio));
+  --ms4: calc(var(--ms3) * var(--ratio));
+  --ms5: calc(var(--ms4) * var(--ratio));
+  --ms6: calc(var(--ms5) * var(--ratio));
+  --ms7: calc(var(--ms6) * var(--ratio));
+  --ms8: calc(var(--ms7) * var(--ratio));
+  --ms9: calc(var(--ms8) * var(--ratio));
+  --ms10: calc(var(--ms9) * var(--ratio));
+  --ms11: calc(var(--ms10) * var(--ratio));
+  --ms12: calc(var(--ms11) * var(--ratio));
+  --ms13: calc(var(--ms12) * var(--ratio));
+  --ms14: calc(var(--ms13) * var(--ratio));
+  --ms15: calc(var(--ms14) * var(--ratio));
+  --ms16: calc(var(--ms15) * var(--ratio));
+  --ms17: calc(var(--ms16) * var(--ratio));
+  --ms18: calc(var(--ms17) * var(--ratio));
+  --ms19: calc(var(--ms18) * var(--ratio));
+  --ms20: calc(var(--ms19) * var(--ratio));
+  --ms-1: calc(var(--ms0) / var(--ratio));
+  --ms-2: calc(var(--ms-1) / var(--ratio));
+  --ms-3: calc(var(--ms-2) / var(--ratio));
+  --ms-4: calc(var(--ms-3) / var(--ratio));
+  --ms-5: calc(var(--ms-4) / var(--ratio));
+  --ms-6: calc(var(--ms-5) / var(--ratio));
+  --ms-7: calc(var(--ms-6) / var(--ratio));
+  --ms-8: calc(var(--ms-7) / var(--ratio));
+  --ms-9: calc(var(--ms-8) / var(--ratio));
+  --off-white: #f4f7f5;
+  --ink-black: #08090a;
+}

@@ -1,0 +1,30 @@
+html {
+  color: var(--off-white);
+  background: var(--ink-black);
+  font-family: 'GT Sectra Fine', serif, -apple-system, BlinkMacSystemFont,
+    'Helvetica Neue', sans-serif;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  line-height: var(--ms1);
+}
+
+ul,
+li,
+html,
+body {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+}
