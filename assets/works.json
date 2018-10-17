@@ -1,0 +1,72 @@
+{
+  "bear": {
+    "name": "Bear",
+    "id": "bear",
+    "year": "2016"
+  },
+  "connecticut-river-pollution": {
+    "name": "Connecticut River Pollution",
+    "id": "connecticut-river-pollution",
+    "year": "2018"
+  },
+  "deer-spine": {
+    "name": "Deer Spine",
+    "id": "deer-spine",
+    "year": "2017"
+  },
+  "deforestation": {
+    "name": "Deforestation",
+    "id": "deforestation",
+    "year": "2018"
+  },
+  "dune-erosion": {
+    "name": "Dune Erosion",
+    "id": "dune-erosion",
+    "year": "2018"
+  },
+  "fawn": {
+    "name": "Fawn",
+    "id": "fawn",
+    "year": "2018"
+  },
+  "fracking-site": {
+    "name": "Fracking Site",
+    "id": "fracking-site",
+    "year": "2017"
+  },
+  "new-schedule": {
+    "name": "New Schedule",
+    "id": "new-schedule",
+    "year": "2018"
+  },
+  "oceanic-pollution": {
+    "name": "Oceanic Pollution",
+    "id": "oceanic-pollution",
+    "year": "2017"
+  },
+  "ram-study-1": {
+    "name": "Ram Study i",
+    "id": "ram-study-1",
+    "year": "2017"
+  },
+  "ram-study-2": {
+    "name": "Ram Study ii",
+    "id": "ram-study-2",
+    "year": "2017"
+  },
+  "reforestation": {
+    "name": "Reforestation",
+    "id": "reforestation",
+    "year": "2018"
+  },
+  "saving-coral-reefs": {
+    "name": "Saving Coral Reefs",
+    "id": "saving-coral-reefs",
+    "year": "2018"
+  },
+  "sink-hole": {
+    "name": "Sink Hole",
+    "id": "sink-hole",
+    "year": "2017"
+  }
+}
