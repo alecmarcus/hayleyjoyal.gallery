@@ -36,13 +36,13 @@ div {
   opacity: 1;
 }
 
-.focused {
+/* .focused {
   cursor: image-set(
       url(../assets/img/plus1x.png) 1x,
       url(../assets/img/plus2x.png) 2x
     ),
     pointer;
-}
+} */
 
 img {
   width: 100%;
