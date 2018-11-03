@@ -46,8 +46,21 @@ main {
   transition: transform 0.5s ease;
 }
 
+@media (max-width: 980px) {
+  .works-list {
+    width: 65vw;
+  }
+}
+
+@media (max-width: 639px) {
+  .works-list {
+    width: 100vw;
+  }
+}
+
 .works-list.hidden {
-  transform: translateX(calc((100vw / 12) * -5));
+  /* transform: translateX(calc((100vw / 12) * -5)); */
+  transform: translateX(-100%);
   pointer-events: none;
 }
 
