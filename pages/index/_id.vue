@@ -1,11 +1,6 @@
-<template>
-  <div>
-    <h1>
+    <!-- <h1>
       {{ activeWork.name }}
-    </h1>
-  </div>
-</template>
-
+    </h1> -->
 <script>
 import { mapState, mapActions } from 'vuex'
 import works from '~/assets/works.json'

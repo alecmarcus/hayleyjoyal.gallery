@@ -1,10 +1,3 @@
-<template>
-  <div>
-    -
-  </div>
-</template>
-
-
 <script>
 import works from '~/assets/works.json'
 

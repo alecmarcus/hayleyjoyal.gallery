@@ -20,7 +20,7 @@
 <script>
 import WorksList from '~/components/VWorksList.vue'
 import WorkImage from '~/components/VWorkImage.vue'
-import { mapState, mapActions } from 'vuex'
+import { mapState } from 'vuex'
 import works from '~/assets/works.json'
 
 export default {
@@ -32,12 +32,6 @@ export default {
     works
   }),
   computed: mapState({ activeWork: state => state.workView.activeWork })
-  // created() {
-  //   if (this.$store.state.activeWork == null) {
-  //     this.setActiveWork(this.works[0])
-  //   }
-  // },
-  // methods: mapActions({ setActiveWork: 'workView/setActiveWork' })
 }
 </script>
 
@@ -53,8 +47,6 @@ main {
 }
 
 .works-list.hidden {
-  position: fixed;
-  top: 0;
   transform: translateX(calc((100vw / 12) * -5));
   pointer-events: none;
 }
@@ -65,7 +57,7 @@ main {
   top: 0;
   width: calc((100vw / 12) * 9);
   height: 100vh;
-  transition: width 0.5s ease;
+  transition: width 0.5s ease 0.125s, opacity 0.3s ease;
 }
 
 .work-view.focused .work-img {
