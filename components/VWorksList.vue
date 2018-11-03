@@ -6,7 +6,8 @@
       :work-id="work.id"
       :name="work.name"
       :year="work.year"
-      @setWork="setActiveWork" />
+      @setWork="setActiveWork"
+      @setWorkThrottled="setActiveWorkThrottled" />
   </ul>
 </template>
 
@@ -23,7 +24,10 @@ export default {
     works
   }),
   methods: {
-    ...mapActions({ setActiveWork: 'workView/setActiveWork' })
+    ...mapActions({
+      setActiveWork: 'workView/setActiveWork',
+      setActiveWorkThrottled: 'workView/setActiveWorkThrottled'
+    })
   }
 }
 </script>

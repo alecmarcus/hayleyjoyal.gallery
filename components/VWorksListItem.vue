@@ -1,8 +1,8 @@
 <template>
   <li
     @mouseover="$emit('setWork', workId)"
-    @click="$emit('setWork', workId)">
-    <a>{{ name }} → <span>{{ year }}</span></a>
+    @click="$emit('setWorkThrottled', workId)">
+    <nuxt-link :to="'/'+workId">{{ name }} &mdash; <span>{{ year }}</span></nuxt-link>
   </li>
 </template>
 
@@ -18,12 +18,12 @@ export default {
 
 <style scoped>
 span {
-  font-family: 'GT Zirkon Trial';
+  font-family: 'Bagnard Sans';
 }
 
 a {
   margin: var(--ms-8) 0;
-  padding-right: var(--ms-6);
+  padding-right: var(--ms-8);
   display: inline-block;
   text-decoration: none;
   cursor: image-set(
@@ -35,6 +35,5 @@ a {
 
 a:hover {
   text-decoration: underline;
-  background: var(--ink-black);
 }
 </style>

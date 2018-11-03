@@ -1,7 +1,10 @@
 <template>
   <div
     :id="imgName"
-    :class="{'visible': (activeWorkId===imgName)}">
+    :class="[
+      {'visible': (activeWorkId===imgName)},
+      {'focused': (this.$route.params.id===imgName)}
+  ]">
     <img
       :src="`/previews/${imgName}.webp`"
       :alt="imgName" >
@@ -24,15 +27,16 @@ div {
   opacity: 0;
   overflow: hidden;
   text-align: center;
-  cursor: image-set(
+  /* cursor: image-set(
       url(../assets/img/plus1x.png) 1x,
       url(../assets/img/plus2x.png) 2x
     ),
-    pointer;
+    pointer; */
   transition: opacity 0.3s ease;
 }
 
-.visible {
+.visible,
+.focused {
   opacity: 1;
 }
 
