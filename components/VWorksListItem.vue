@@ -22,6 +22,7 @@ span {
 }
 
 a {
+  user-select: none;
   margin: var(--ms-8) 0;
   padding-right: var(--ms-8);
   display: inline-block;
