@@ -1,5 +1,6 @@
 <template>
   <div
+    v-if="!$route.params.id || $route.params.id === imgName"
     :id="imgName"
     :class="[
       {'visible': (activeWorkId===imgName)},
@@ -27,17 +28,20 @@ div {
   opacity: 0;
   overflow: hidden;
   text-align: center;
-  /* cursor: image-set(
-      url(../assets/img/plus1x.png) 1x,
-      url(../assets/img/plus2x.png) 2x
-    ),
-    pointer; */
   transition: opacity 0.3s ease;
 }
 
 .visible,
 .focused {
   opacity: 1;
+}
+
+.focused {
+  cursor: image-set(
+      url(../assets/img/plus1x.png) 1x,
+      url(../assets/img/plus2x.png) 2x
+    ),
+    pointer;
 }
 
 img {
