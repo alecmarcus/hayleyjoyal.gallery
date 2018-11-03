@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>
-      {{ works[this.$route.params.id].name }}
+      {{ activeWork.name }}
     </h1>
   </div>
 </template>
@@ -34,15 +34,11 @@ export default {
   }),
   computed: mapState({ activeWork: state => state.workView.activeWork }),
   created() {
-    if (this.$store.state.activeWork === null) {
-      this.$store.dispatch(this.setActiveWork(this.$route.params.id))
+    if (this.$store.state.activeWork == null) {
+      this.setActiveWork(this.$route.params.id)
     }
   },
-  methods: {
-    ...mapActions({
-      setActiveWork: 'workView/setActiveWork'
-    })
-  }
+  methods: mapActions({ setActiveWork: 'workView/setActiveWork' })
 }
 </script>
 

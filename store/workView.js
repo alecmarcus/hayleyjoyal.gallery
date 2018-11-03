@@ -2,7 +2,7 @@ import works from '~/assets/works.json'
 import { debounce } from 'lodash'
 
 export const state = () => ({
-  activeWorkId: null,
+  activeWorkId: works[Object.keys(works)[0]].id,
   activeWork: null
 })
 

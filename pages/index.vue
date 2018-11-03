@@ -20,7 +20,7 @@
 <script>
 import WorksList from '~/components/VWorksList.vue'
 import WorkImage from '~/components/VWorkImage.vue'
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 import works from '~/assets/works.json'
 
 export default {
@@ -32,6 +32,12 @@ export default {
     works
   }),
   computed: mapState({ activeWork: state => state.workView.activeWork })
+  // created() {
+  //   if (this.$store.state.activeWork == null) {
+  //     this.setActiveWork(this.works[0])
+  //   }
+  // },
+  // methods: mapActions({ setActiveWork: 'workView/setActiveWork' })
 }
 </script>
 
