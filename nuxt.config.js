@@ -3,6 +3,15 @@ const pkg = require('./package')
 module.exports = {
   mode: 'spa',
 
+  // router: {
+  //   extendRoutes(routes, resolve) {
+  //     routes.push({
+  //       name: 'work',
+  //       path: '/',
+  //       component: resolve(__dirname, 'pages/index.vue')
+  //     })
+  //   }
+  // },
   /*
   ** Headers of the page
   */
@@ -15,7 +24,6 @@ module.exports = {
     ],
     link: [{ rel: 'icon', type: 'image/png', href: '/favicon-196.png' }]
   },
-
   /*
   ** Customize the progress-bar color
   */
@@ -24,7 +32,11 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ['~/assets/css/vars.css', '~/assets/css/defaults.css'],
+  css: [
+    '~/assets/css/vars.css',
+    '~/assets/css/defaults.css',
+    '~/assets/css/bagnard.css'
+  ],
 
   /*
   ** Plugins to load before mounting the App
