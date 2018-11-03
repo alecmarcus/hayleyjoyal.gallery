@@ -2,16 +2,6 @@ const pkg = require('./package')
 
 module.exports = {
   mode: 'spa',
-
-  // router: {
-  //   extendRoutes(routes, resolve) {
-  //     routes.push({
-  //       name: 'work',
-  //       path: '/',
-  //       component: resolve(__dirname, 'pages/index.vue')
-  //     })
-  //   }
-  // },
   /*
   ** Headers of the page
   */
