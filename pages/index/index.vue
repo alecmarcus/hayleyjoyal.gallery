@@ -1,3 +1,8 @@
+<template>
+  <span>No project selected.</span>
+</template>
+
+
 <script>
 import works from '~/assets/works.json'
 
@@ -9,4 +14,7 @@ export default {
 </script>
 
 <style scoped>
+span {
+  display: none;
+}
 </style>
