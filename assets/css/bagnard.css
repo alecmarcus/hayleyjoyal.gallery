@@ -3,8 +3,8 @@
   font-style: normal;
   font-weight: 400;
   src:
-    url('~/assets/fonts/Bagnard.woff2') format('woff2'),
-    url('~/assets/fonts/Bagnard.woff') format('woff');
+    url('~assets/fonts/Bagnard.woff2') format('woff2'),
+    url('~assets/fonts/Bagnard.woff') format('woff');
 }
 
 @font-face {
@@ -12,6 +12,6 @@
   font-style: normal;
   font-weight: 400;
   src:
-    url('~/assets/fonts/BagnardSans.woff2') format('woff2'),
-    url('~/assets/fonts/BagnardSans.woff') format('woff');
+    url('~assets/fonts/BagnardSans.woff2') format('woff2'),
+    url('~assets/fonts/BagnardSans.woff') format('woff');
 }

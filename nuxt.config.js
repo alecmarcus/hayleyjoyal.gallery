@@ -71,8 +71,8 @@ module.exports = {
   },
   generate: {
     routes: function() {
-      return axios.get('~/assets/works.json').then((res) => {
-        return res.data.map((work) => {
+      return axios.get('~/assets/works.json').then(res => {
+        return res.data.map(work => {
           return '/' + work.id
         })
       })
