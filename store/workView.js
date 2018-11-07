@@ -19,7 +19,6 @@ function setActiveWork(store, workId) {
 
 function throttled(delay, fn) {
   let lastCall = 0
-  console.log('throttling')
   return function(...args) {
     const now = new Date().getTime()
     if (now - lastCall < delay) {
