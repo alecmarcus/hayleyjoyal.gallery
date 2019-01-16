@@ -1,13 +1,9 @@
 <template>
   <header>
-    <nuxt-link to="/">
-      Return To Index
-    </nuxt-link>
     <abbr
       :title="activeWork.name + ', ' + activeWork.year"
-      :aria-label="activeWork.Name">
-      i
-    </abbr>
+      :aria-label="activeWork.Name">i</abbr>
+    <nuxt-link to="/">Return to Index</nuxt-link>
   </header>
 </template>
 
@@ -51,15 +47,15 @@ export default {
 <style scoped>
 header {
   user-select: none;
-  width: 100vw;
-  padding: 1.25em 1.56em;
+  padding: 1.25em;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-flow: row nowrap;
   position: fixed;
+  width: 100vw;
   top: 0;
-  left: 0;
+  right: 0;
 }
 
 header *,
@@ -79,7 +75,7 @@ abbr:before {
   content: attr(title);
   display: inline-block;
   position: absolute;
-  right: 4.75em;
+  left: 4.75em;
   top: 2em;
   color: #f4f7f5;
   color: var(--off-white);
