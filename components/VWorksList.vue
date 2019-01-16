@@ -34,7 +34,7 @@ export default {
 
 <style scoped>
 ul {
-  font-size: var(--ms6);
+  font-size: var(--ms5);
   padding-left: var(--ms-6);
 }
 </style>
