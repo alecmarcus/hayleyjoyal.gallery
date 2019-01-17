@@ -40,14 +40,19 @@ export default {
     scrollWorksList: function(event) {
       let listHeight = this.$refs.worksList.$el.getBoundingClientRect().height
       let overhang = listHeight - window.innerHeight
-      let deadZone = 0.3
-      let mousePosPercent = //event.pageY / window.innerHeight
-        (event.pageY - deadZone * window.innerHeight) / window.innerHeight
-      let offsetY = (overhang * mousePosPercent) / (deadZone - 1)
-      mousePosPercent > 0
-        ? (this.$refs.worksList.$el.style.top = offsetY + 'px')
-        : (this.$refs.worksList.$el.style.top = '0')
-      console.log(offsetY)
+      let deadZone = 0.3 // Percentage of the page, starting from the top, where mouse position doesn't affect list position.
+      let acceleration = 1.4 // Accelerates scrolling so that the list can be scrolled completely without having to mouse all the way to the bottom of the viewport.
+      let mousePosPercent =
+        (event.pageY - deadZone * window.innerHeight) / window.innerHeight // Establish a ratio, between page height (minus a dead zone) and list height, that ensures mouse pos can be used to scroll through the entire list on any viewport.
+      let offsetY =
+        ((overhang * mousePosPercent) / (deadZone - 1)) * acceleration
+      if (mousePosPercent > 0 && mousePosPercent < 0.5) {
+        this.$refs.worksList.$el.style.top = offsetY + 'px'
+      } else if (mousePosPercent > 0.49) {
+        this.$refs.worksList.$el.style.top = '-' + overhang + 'px'
+      } else {
+        this.$refs.worksList.$el.style.top = '0'
+      }
     }
   }
 }
