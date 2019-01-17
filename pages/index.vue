@@ -12,6 +12,7 @@
         :key="$route.params.id" />
     </section>
     <works-list
+      ref="worksList"
       :class="{hidden: this.$route.params.id}"
       class="works-list"/>
   </main>
@@ -31,19 +32,39 @@ export default {
   data: () => ({
     works
   }),
-  computed: mapState({ activeWork: state => state.workView.activeWork })
+  computed: mapState({ activeWork: state => state.workView.activeWork }),
+  mounted() {
+    document.onmousemove = this.scrollWorksList
+  },
+  methods: {
+    scrollWorksList: function(event) {
+      let listHeight = this.$refs.worksList.$el.getBoundingClientRect().height
+      let overhang = listHeight - window.innerHeight
+      let deadZone = 0.3
+      let mousePosPercent = //event.pageY / window.innerHeight
+        (event.pageY - deadZone * window.innerHeight) / window.innerHeight
+      let offsetY = (overhang * mousePosPercent) / (deadZone - 1)
+      mousePosPercent > 0
+        ? (this.$refs.worksList.$el.style.top = offsetY + 'px')
+        : (this.$refs.worksList.$el.style.top = '0')
+      console.log(offsetY)
+    }
+  }
 }
 </script>
 
 <style scoped>
 main {
   position: relative;
+  max-height: 100vh;
+  overflow: hidden;
 }
 
 .works-list {
   position: relative;
   width: calc((100vw / 12) * 5);
   transition: transform 0.5s ease;
+  top: 0;
 }
 
 @media (max-width: 980px) {

@@ -4,5 +4,8 @@
   </div>
 </template>
 
-<style scoped>
+<style>
+body {
+  overscroll-behavior: none;
+}
 </style>
